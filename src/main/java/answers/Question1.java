@@ -17,6 +17,10 @@ public class Question1 {
 			{
 
 				maxm = Math.max(portfolios[i]^portfolios[j],maxm);
+				if(maxm == 2147483647)
+				{
+					return maxm;
+				}
 
 			}
 
