@@ -4,7 +4,15 @@ public class Question1 {
 
 	public static int bestMergedPortfolio(int[] portfolios) {
 		// TODO Auto-generated method stub
-		return -1;
+		int maxm = 0;
+		for(int i =0;i<portfolios.len();i++)
+		{
+			for(int j=i+1;j<portfolios.len();j++)
+			{
+				maxm = Math.max(portfolios[i]^portfolios[j],maxm);
+			}
+		}
+		return maxm
 	}
 
 }
