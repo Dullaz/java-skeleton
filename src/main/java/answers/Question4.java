@@ -8,7 +8,6 @@ public class Question4 {
         int j = rows[0].length - numberMachines;
         int tempmin = 0;
         for (String[] row : rows) {
-            System.out.println(Arrays.toString(row));
             for (int i = 0; i <= j; i++) {
                 tempmin = 0;
                 for (int k = 0; k < numberMachines; k++) {
@@ -16,6 +15,7 @@ public class Question4 {
                         tempmin += Integer.parseInt(row[i + k]);
                     } catch (Exception e) {
                         tempmin = 0;
+                        k=numberMachines;
                     }
                 }
                 if (tempmin != 0) {
@@ -25,10 +25,4 @@ public class Question4 {
         }
         return mintime;
     }
-
-    public static void main(String[] args) {
-        String[][] arr = { { "1", "2", "3", "4" }, { "1", "X", "2", "X" }, { "1", "X", "1", "1" } };
-        System.out.println(selectionFailedTradedesks(arr, 4));
-    }
-
 }
