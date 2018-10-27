@@ -12,7 +12,7 @@ public class Question1 {
 				maxm = Math.max(portfolios[i]^portfolios[j],maxm);
 			}
 		}
-		return maxm
+		return maxm;
 	}
 
 }
